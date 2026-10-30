@@ -22,7 +22,7 @@ export default function CreateOutletScreen({ navigation }: any) {
   const fields: { name: keyof OutletFormValues; label: string; keyboard?: any; placeholder: string }[] = [
     { name: 'name', label: 'Outlet Name', placeholder: 'e.g. Main Street Store' },
     { name: 'contactPerson', label: 'Contact Person', placeholder: 'e.g. John Doe' },
-    { name: 'phone', label: 'Phone', keyboard: 'phone-pad', placeholder: '+1 555 0000' },
+    { name: 'phone', label: 'Phone', keyboard: 'phone-pad', placeholder: '+91 854420120' },
     { name: 'address', label: 'Address', placeholder: 'Street, City' },
   ];
 
@@ -32,7 +32,7 @@ export default function CreateOutletScreen({ navigation }: any) {
         <View key={f.name} style={s.field}>
           <Text style={s.label}>{f.label}</Text>
           <Controller control={control} name={f.name} render={({ field: { onChange, value } }) => (
-            <TextInput style={[s.input, errors[f.name] && s.inputErr]} value={String(value ?? '')} onChangeText={onChange} keyboardType={f.keyboard} placeholder={f.placeholder} placeholderTextColor="#9ca3af" />
+            <TextInput style={[s.input, errors[f.name] && s.inputErr]} value={String(value ?? '')} onChangeText={onChange} keyboardType={f.keyboard} placeholder={f.placeholder} maxLength={f.name === 'phone' ? 10 : undefined} placeholderTextColor="#9ca3af" />
           )} />
           {errors[f.name] && <Text style={s.err}>{errors[f.name]?.message}</Text>}
         </View>
@@ -55,3 +55,4 @@ const s = StyleSheet.create({
   btn: { backgroundColor: '#2563eb', padding: 14, borderRadius: 10, alignItems: 'center', marginTop: 8, shadowColor: '#2563eb', shadowOpacity: 0.3, shadowRadius: 6, elevation: 3 },
   btnText: { color: '#fff', fontWeight: 'bold', fontSize: 16 },
 });
+

@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity, ActivityIndicator, StyleSheet } from 'rea
 import { useNavigation, useRoute, useFocusEffect } from '@react-navigation/native';
 import { outletApi } from '../services/outlet.service';
 import { Outlet } from '../types/outlet.types';
+import { Ionicons } from '@expo/vector-icons';
 import ConfirmModal from '../../../components/ConfirmModal';
 
 export default function OutletDetailsScreen() {
@@ -43,8 +44,8 @@ export default function OutletDetailsScreen() {
       <Text>Longitude: {outlet.longitude}</Text>
       <Text>Created: {new Date(outlet.createdAt).toLocaleString()}</Text>
       <Text>Updated: {new Date(outlet.updatedAt).toLocaleString()}</Text>
-      <TouchableOpacity style={s.btn} onPress={() => nav.navigate('EditOutlet', { id })}><Text style={s.btnText}>Edit</Text></TouchableOpacity>
-      <TouchableOpacity style={[s.btn, { backgroundColor: 'red' }]} onPress={() => setShowConfirm(true)}><Text style={s.btnText}>Delete</Text></TouchableOpacity>
+      <TouchableOpacity style={s.btn} onPress={() => nav.navigate('EditOutlet', { id })}><Ionicons name="pencil" size={18} color="#fff" /><Text style={s.btnText}> Edit</Text></TouchableOpacity>
+      <TouchableOpacity style={[s.btn, { backgroundColor: 'red' }]} onPress={() => setShowConfirm(true)}><Ionicons name="trash" size={18} color="#fff" /><Text style={s.btnText}> Delete</Text></TouchableOpacity>
     </View>
   );
 }
@@ -56,3 +57,4 @@ const s = StyleSheet.create({
   btn: { backgroundColor: '#1e40af', padding: 12, borderRadius: 8, alignItems: 'center', marginTop: 12 },
   btnText: { color: '#fff', fontWeight: 'bold' },
 });
+
