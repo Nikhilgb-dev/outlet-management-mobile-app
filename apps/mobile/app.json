@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "Outlet Management",
+    "slug": "outlet-management",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "android": {
+      "usesCleartextTraffic": true,
+      "permissions": ["INTERNET", "ACCESS_NETWORK_STATE"]
+    },
+    "extra": {
+      "apiBaseUrl": "http://10.0.2.2:4000/api",
+      "lanIp": "10.94.34.139"
+    }
+  }
+}
