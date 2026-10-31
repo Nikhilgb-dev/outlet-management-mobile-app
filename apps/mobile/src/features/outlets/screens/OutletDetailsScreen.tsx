@@ -40,8 +40,6 @@ export default function OutletDetailsScreen() {
       <Text>Contact: {outlet.contactPerson}</Text>
       <Text>Phone: {outlet.phone}</Text>
       <Text>Address: {outlet.address}</Text>
-      <Text>Latitude: {outlet.latitude}</Text>
-      <Text>Longitude: {outlet.longitude}</Text>
       <Text>Created: {new Date(outlet.createdAt).toLocaleString()}</Text>
       <Text>Updated: {new Date(outlet.updatedAt).toLocaleString()}</Text>
       <View style={s.btnRow}>

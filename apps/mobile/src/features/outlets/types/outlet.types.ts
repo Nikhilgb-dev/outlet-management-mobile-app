@@ -4,8 +4,6 @@ export interface Outlet {
   contactPerson: string;
   phone: string;
   address: string;
-  latitude: number;
-  longitude: number;
   createdAt: string;
   updatedAt: string;
 }

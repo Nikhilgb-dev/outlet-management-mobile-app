@@ -20,11 +20,11 @@ export class OutletService {
   }
 
   async create(data: OutletInput) {
-    return prisma.outlet.create({ data });
+    return prisma.outlet.create({ data: data as any });
   }
 
   async update(id: string, data: OutletInput) {
-    return prisma.outlet.update({ where: { id }, data });
+    return prisma.outlet.update({ where: { id }, data: data as any });
   }
 
   async delete(id: string) {

@@ -13,8 +13,6 @@ model Outlet {
   contactPerson String   @map("contact_person") @db.VarChar(100)
   phone         String   @db.VarChar(20)
   address       String   @db.Text
-  latitude      Float
-  longitude     Float
   createdAt     DateTime @default(now()) @map("created_at")
   updatedAt     DateTime @updatedAt @map("updated_at")
 
