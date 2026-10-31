@@ -33,7 +33,6 @@ export default function OutletListScreen() {
   return (
     <View style={s.container}>
       <Toast message={toast?.msg} type={toast?.type} visible={!!toast} onHide={() => setToast(null)} />
-      <Text style={s.title}>Outlet Manager</Text>
       <Text style={s.subtitle}>Total: {outlets.length}</Text>
       <TextInput style={s.search} placeholder="Search by name, contact, phone" value={search} onChangeText={setSearch} onSubmitEditing={load} />
       <FlatList data={outlets} keyExtractor={(i) => i.id} ListEmptyComponent={<Text style={s.empty}>No outlets found</Text>}
