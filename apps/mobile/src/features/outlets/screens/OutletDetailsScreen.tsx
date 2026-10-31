@@ -44,8 +44,14 @@ export default function OutletDetailsScreen() {
       <Text>Longitude: {outlet.longitude}</Text>
       <Text>Created: {new Date(outlet.createdAt).toLocaleString()}</Text>
       <Text>Updated: {new Date(outlet.updatedAt).toLocaleString()}</Text>
-      <TouchableOpacity style={s.btn} onPress={() => nav.navigate('EditOutlet', { id })}><Ionicons name="pencil" size={18} color="#fff" /><Text style={s.btnText}> Edit</Text></TouchableOpacity>
-      <TouchableOpacity style={[s.btn, { backgroundColor: 'red' }]} onPress={() => setShowConfirm(true)}><Ionicons name="trash" size={18} color="#fff" /><Text style={s.btnText}> Delete</Text></TouchableOpacity>
+      <View style={s.btnRow}>
+        <TouchableOpacity style={[s.btn, s.btnFlex]} onPress={() => nav.navigate('EditOutlet', { id })}>
+          <View style={s.btnContent}><Ionicons name="pencil" size={18} color="#fff" /><Text style={s.btnText}> Edit</Text></View>
+        </TouchableOpacity>
+        <TouchableOpacity style={[s.btn, s.btnFlex, { backgroundColor: '#DC2626' }]} onPress={() => setShowConfirm(true)}>
+          <View style={s.btnContent}><Ionicons name="trash" size={18} color="#fff" /><Text style={s.btnText}> Delete</Text></View>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
@@ -54,7 +60,10 @@ const s = StyleSheet.create({
   container: { flex: 1, padding: 16, backgroundColor: '#fff' },
   center: { flex: 1, justifyContent: 'center', alignItems: 'center' },
   title: { fontSize: 22, fontWeight: 'bold', marginBottom: 12 },
-  btn: { backgroundColor: '#1e40af', padding: 12, borderRadius: 8, alignItems: 'center', marginTop: 12 },
-  btnText: { color: '#fff', fontWeight: 'bold' },
+  btnRow: { flexDirection: 'row', gap: 12, marginTop: 12 },
+  btn: { backgroundColor: '#4F46E5', padding: 12, borderRadius: 8, alignItems: 'center' },
+  btnFlex: { flex: 1 },
+  btnContent: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center' },
+  btnText: { color: '#fff', fontWeight: 'bold', fontFamily: 'System', fontSize: 15 },
 });
 

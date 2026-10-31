@@ -54,12 +54,12 @@ export default function OutletListScreen() {
 const s = StyleSheet.create({
   container: { flex: 1, padding: 16, backgroundColor: '#fff' },
   center: { flex: 1, justifyContent: 'center', alignItems: 'center' },
-  title: { fontSize: 24, fontWeight: 'bold', color: '#1e40af' },
+  title: { fontSize: 24, fontWeight: 'bold', color: '#4F46E5' },
   subtitle: { marginBottom: 8, color: '#555' },
   search: { borderWidth: 1, borderColor: '#ccc', borderRadius: 8, padding: 10, marginBottom: 12 },
   card: { padding: 12, borderWidth: 1, borderColor: '#e5e7eb', borderRadius: 8, marginBottom: 10 },
   name: { fontWeight: 'bold', fontSize: 16 },
   empty: { textAlign: 'center', marginTop: 20, color: '#888' },
-  fab: { position: 'absolute', bottom: 20, right: 20, backgroundColor: '#1e40af', padding: 14, borderRadius: 30 },
+  fab: { position: 'absolute', bottom: 20, right: 20, backgroundColor: '#4F46E5', padding: 14, borderRadius: 30 },
   fabText: { color: '#fff', fontWeight: 'bold' },
 });
