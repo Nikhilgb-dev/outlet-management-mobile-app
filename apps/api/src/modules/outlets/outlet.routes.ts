@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { createOutlet, listOutlets, getOutlet, updateOutlet, deleteOutlet } from '../controllers/outlet.controller';
-import { validateBody, validateParams } from '../middleware/validate';
-import { outletSchema, idParamSchema } from '../validators/outlet.validator';
+import { createOutlet, listOutlets, getOutlet, updateOutlet, deleteOutlet } from './outlet.controller';
+import { validateBody, validateParams } from '../../shared/middleware/validate';
+import { outletSchema, idParamSchema } from './outlet.validator';
 
 const router = Router();
 

@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { outletService } from '../services/outlet.service';
+import { outletService } from './outlet.service';
 
 export const createOutlet = async (req: Request, res: Response, next: NextFunction) => {
   try {

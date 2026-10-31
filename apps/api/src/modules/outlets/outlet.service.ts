@@ -1,5 +1,5 @@
-import prisma from '../config/prisma';
-import { OutletInput } from '../validators/outlet.validator';
+import prisma from '../../shared/config/prisma';
+import { OutletInput } from './outlet.validator';
 
 export class OutletService {
   async list(search?: string) {
